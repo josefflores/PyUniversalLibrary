@@ -31,6 +31,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Author: Andrew Straw
+from __future__ import print_function
 import UniversalLibrary as UL
 BoardNum = 0
 PortNum = UL.FIRSTPORTA
@@ -39,6 +40,4 @@ UL.cbDConfigPort(BoardNum, PortNum, Direction)
 DataValue = 0
 while 1:
     DataValue = UL.cbDIn(BoardNum, PortNum, DataValue)
-    print "Port Value:",DataValue
-
-
+    print("Port Value:", DataValue)

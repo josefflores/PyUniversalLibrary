@@ -46,5 +46,5 @@ Count = HighChan - LowChan + 1
 Rate = UL.NOTUSED
 Options = 0
 
-Rate = UL.cbAOutScan (BoardNum, LowChan, HighChan, Count, Rate, Gain, ADData,
-                      Options)
+Rate = UL.cbAOutScan(BoardNum, LowChan, HighChan, Count, Rate, Gain, ADData,
+                     Options)

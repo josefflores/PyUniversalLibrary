@@ -32,6 +32,7 @@
 
 # Author: Andrew Straw
 
+from __future__ import print_function
 import UniversalLibrary as UL
 import numpy
 
@@ -47,13 +48,16 @@ Rate = 3125
 
 Options = UL.CONVERTDATA + UL.BACKGROUND + UL.SINGLEIO
 ADData = numpy.zeros((Count,), dtype=numpy.int16)
-print 'a'
+print('a')
 Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
                     Rate, Gain, ADData, Options)
+print(Rate)
 
 Status = UL.RUNNING
 CurCount = 0
 CurIndex = 0
 while Status==UL.RUNNING:
-    print 'b'
+    print('b')
     Status, CurCount, CurIndex = UL.cbGetStatus(BoardNum, Status, CurCount, CurIndex, UL.AIFUNCTION)
+
+print(ADData)

@@ -36,7 +36,7 @@ import UniversalLibrary as UL
 BoardNum = 0
 PortNum = UL.FIRSTPORTA
 Direction = UL.DIGITALOUT
-UL.cbDConfigPort (BoardNum, PortNum, Direction)
+UL.cbDConfigPort(BoardNum, PortNum, Direction)
 
 DataValue = 0
 UL.cbDOut(BoardNum, PortNum, DataValue)

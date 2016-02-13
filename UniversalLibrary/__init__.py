@@ -33,4 +33,5 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Author: Andrew Straw
-from UniversalLibrary import *
+from __future__ import absolute_import
+from .UniversalLibrary import *

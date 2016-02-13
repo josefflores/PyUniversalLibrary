@@ -32,6 +32,7 @@
 
 # Author: Andrew Straw
 
+from __future__ import print_function
 import UniversalLibrary as UL
 import numpy
 
@@ -45,15 +46,18 @@ Count = 10000
 Rate = 3125
 
 Options = UL.CONVERTDATA + UL.BACKGROUND + UL.SINGLEIO
-ADData = numpy.zeros((10000,), dtype=numpy.int16)
+ADData = numpy.zeros((Count,), dtype=numpy.int16)
 
 # Note that one could do similar things with a multi-threaded program
 
 Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
                     Rate, Gain, ADData, Options)
+print(Rate)
 
 Status = UL.RUNNING
 CurCount = 0
 CurIndex = 0
 while Status==UL.RUNNING:
     Status, CurCount, CurIndex = UL.cbGetStatus(BoardNum, Status, CurCount, CurIndex, UL.AIFUNCTION)
+
+print(ADData)

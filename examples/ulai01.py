@@ -32,6 +32,7 @@
 
 # Author: Andrew Straw
 
+from __future__ import print_function
 import UniversalLibrary as UL
 
 BoardNum = 0
@@ -42,4 +43,4 @@ while 1:
     DataValue = UL.cbAIn(BoardNum, Chan, Gain)
     EngUnits = UL.cbToEngUnits(BoardNum, Gain, DataValue)
 
-    print DataValue, EngUnits
+    print(DataValue, EngUnits)

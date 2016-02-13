@@ -32,6 +32,7 @@
 
 # Author: Andrew Straw
 
+from __future__ import print_function
 import UniversalLibrary as UL
 import numpy
 
@@ -49,3 +50,5 @@ ADData = numpy.zeros((Count,), numpy.int16)
 Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
                     Rate, Gain, ADData, Options)
 
+print(Rate)
+print(ADData)

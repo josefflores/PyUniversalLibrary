@@ -107,6 +107,7 @@ exceptions.
 
 ::
 
+  from __future__ import print_function
   import UniversalLibrary as UL
 
   BoardNum = 0
@@ -117,7 +118,7 @@ exceptions.
       DataValue = UL.cbAIn(BoardNum, Chan, Gain)
       EngUnits = UL.cbToEngUnits(BoardNum, Gain, DataValue)
 
-      print DataValue, EngUnits
+      print(DataValue, EngUnits)
 
 
 Further examples are included, including a simple

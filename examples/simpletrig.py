@@ -32,6 +32,7 @@
 
 # Author: Andrew Straw
 
+from __future__ import print_function
 import UniversalLibrary as UL
 import numpy
 import pylab
@@ -48,7 +49,7 @@ Rate = 10000
 
 UL.cbSetTrigger(BoardNum, UL.TRIG_HIGH, 0, 0)
 
-print 'Waiting for trigger'
+print('Waiting for trigger')
 Options = UL.CONVERTDATA + UL.EXTTRIGGER
 ADData = numpy.zeros((Count,), dtype=numpy.int16)
 Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
