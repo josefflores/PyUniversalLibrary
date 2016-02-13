@@ -48,5 +48,5 @@ Count = 15
 Rate = 15
 DataBuffer = numpy.zeros((Count,),dtype=numpy.uint8)
 Rate = UL.cbDInScan(BoardNum, PortNum, Count, Rate, DataBuffer, Options)
-    
-    
+
+

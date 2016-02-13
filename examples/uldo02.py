@@ -60,7 +60,7 @@ elif FirstPort==UL.FIRSTPORTCH:
     FirstBit = 20
 else:
     FirstBit = 0
-    
+
 Direction = UL.DIGITALOUT
 UL.cbDConfigPort(BoardNum, FirstPort+1, Direction)
 DataValue = 5
@@ -72,6 +72,6 @@ for BitNum in range(8):
         BitValue = 0
     else:
         BitValue = 0
-    
+
     PortType=UL.FIRSTPORTA
     UL.cbDBitOut(BoardNum, PortType, FirstBit+BitNum, BitValue)

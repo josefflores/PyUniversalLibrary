@@ -52,7 +52,7 @@ print 'Waiting for trigger'
 Options = UL.CONVERTDATA + UL.EXTTRIGGER
 ADData = numpy.zeros((Count,), dtype=numpy.int16)
 Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
-                    Rate, Gain, ADData, Options)    
+                    Rate, Gain, ADData, Options)
 
 pylab.plot( ADData )
 pylab.show()

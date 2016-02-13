@@ -52,7 +52,7 @@ Options = UL.CONVERTDATA
 PretrigCount, TotalCount, Rate = UL.cbAPretrig (BoardNum, LowChan, HighChan,
                                                 PretrigCount, TotalCount,
                                                 Rate, Gain, ADData, Options)
-    
+
 ##Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
 ##                    Rate, Gain, ADData, Options)
 

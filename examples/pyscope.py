@@ -2,7 +2,7 @@
 """
 Copyright (C) Jeremy O'Donoghue, 2003
 Copyright (C) California Institute of Technology, 2005-2006
- 
+
 License: This work is licensed under the PSF. A copy is available at
 http://www.python.org/psf/license.html
 
@@ -35,7 +35,7 @@ class TrigEvent(wxPyEvent):
 def daq_thread_func(wxapp):
     TotalCount = 3000
     ADData = numpy.zeros((TotalCount+512,), dtype=numpy.int16)
-    
+
     BoardNum = 0
     UDStat = 0
     Gain = UL.BIP5VOLTS
@@ -46,7 +46,7 @@ def daq_thread_func(wxapp):
     Rate = 20000
 
     PretrigCount = 500
-    
+
     Options = UL.CONVERTDATA
     while 1:
         PretrigCount, TotalCount, Rate = UL.cbAPretrig (BoardNum,
@@ -92,18 +92,18 @@ class App(wxApp):
         self.frame.Show()
         self.SetTopWindow(self.frame)
         return True
-        
+
     def GetToolBar(self):
-        # You will need to override GetToolBar if you are using an 
+        # You will need to override GetToolBar if you are using an
         # unmanaged toolbar in your frame
         return self.frame.toolbar
-		
+
     def OnTrig(self, evt):
         assert evt.GetEventType() == EVT_TRIG_ID
-        
+
         ch0 = evt.data[0:evt.totalcount:2]
         ch1 = evt.data[1:evt.totalcount:2]
-        
+
         if hasattr(self.frame,'ind'):
             # we have already been run once and have an old copy of data
             self.frame.lines[0].set_data( self.frame.ind, ch0 )
@@ -115,12 +115,12 @@ class App(wxApp):
                                       self.frame.ind, ch1, 'g-' )
         self.frame.canvas.draw()
         self.frame.canvas.gui_repaint()
-        
+
 if __name__ == '__main__':
     app = App(redirect=False)
 
     daq_thread = threading.Thread(target=daq_thread_func,args=(app,))
     daq_thread.setDaemon(True)
     daq_thread.start()
-    
+
     app.MainLoop()

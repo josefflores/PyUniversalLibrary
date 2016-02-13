@@ -40,5 +40,5 @@ DataValue = 0
 while 1:
     DataValue = UL.cbDIn(BoardNum, PortNum, DataValue)
     print "Port Value:",DataValue
-    
-    
+
+
