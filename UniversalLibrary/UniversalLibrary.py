@@ -48,13 +48,17 @@ cbDeclareRevision()
 
 """
 
+import platform
 import ctypes
 from ctypes import byref
 import numpy
 import constants # PyUL contants
 from constants import * # PyUL contants
 
-cbw = ctypes.windll.cbw32 # open CBW32.DLL
+if platform.architecture()[0] == '64bit':
+    cbw = ctypes.windll.cbw64 # open CBW64.DLL
+else:
+    cbw = ctypes.windll.cbw32 # open CBW32.DLL
 
 all_constants = [attr for attr in constants.__dict__
                  if not attr.startswith('__')]
