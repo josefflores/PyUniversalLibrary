@@ -54,9 +54,12 @@ Also of interest
 Various Python wrappers for data acquisition are available.  Here are a few I know of:
 
  * National Instruments NI-DAQ: http://sourceforge.net/projects/uncpythontools/
+ * National Instruments NIDAQmx: http://pythonhosted.org/PyDAQmx/
  * Data Translation: `Martin Spacek`_ has indicated (personal commication) he has drivers
  * Comedi apparently comes with Python wrappers: http://www.comedi.org/
  * `Dr. Warren Jasper's`_ `Measurement Computing USB drivers for Linux`_ (Andrew Straw has written Python wrappers for these - contact him for further information)
+ * IOtech (now owned by Measurement Computing): https://github.com/fake-name/PyIOTech/
+ * LabJack: https://github.com/labjack/LabJackPython/
 
 .. _Martin Spacek: http://www.ece.ualberta.ca/~mspacek/
 .. _Dr. Warren Jasper's: http://www.tx.ncsu.edu/faculty_center/directory/detail.cfm?id=57
