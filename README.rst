@@ -108,7 +108,7 @@ translation of the essentials of ulai01.c, included with `Universal
 Library`_. Error checking occurs automatically through Python
 exceptions.
 
-::
+.. code:: python
 
   from __future__ import print_function
   import UniversalLibrary as UL
