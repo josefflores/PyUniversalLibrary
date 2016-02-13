@@ -52,6 +52,8 @@ Rate = UL.cbAInScan(BoardNum, LowChan, HighChan, Count,
                     Rate, Gain, ADData, Options)
 
 Status = UL.RUNNING
+CurCount = 0
+CurIndex = 0
 while Status==UL.RUNNING:
     print 'b'
-    Status, CurCount, CurIndex = cbGetStatus(BoardNum, Status, CurCount, CurIndex, UL.AIFUNCTION)
+    Status, CurCount, CurIndex = UL.cbGetStatus(BoardNum, Status, CurCount, CurIndex, UL.AIFUNCTION)
